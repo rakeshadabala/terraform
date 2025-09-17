@@ -1,0 +1,53 @@
+{
+  "version": 4,
+  "terraform_version": "1.13.0",
+  "serial": 11,
+  "lineage": "8ff5fd5f-5252-b26e-4d68-7b34553ed2cd",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "google_compute_address",
+      "name": "addre",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": "34.186.15.91",
+            "address_type": "EXTERNAL",
+            "creation_timestamp": "2025-09-11T06:23:06.409-07:00",
+            "description": "",
+            "effective_labels": {
+              "goog-terraform-provisioned": "true"
+            },
+            "id": "projects/peak-key-463905-i9/regions/us-west4/addresses/venkayya",
+            "ip_version": "",
+            "ipv6_endpoint_type": "",
+            "label_fingerprint": "vezUS-42LLM=",
+            "labels": null,
+            "name": "venkayya",
+            "network": "",
+            "network_tier": "PREMIUM",
+            "prefix_length": 0,
+            "project": "peak-key-463905-i9",
+            "purpose": "",
+            "region": "us-west4",
+            "self_link": "https://www.googleapis.com/compute/v1/projects/peak-key-463905-i9/regions/us-west4/addresses/venkayya",
+            "subnetwork": "",
+            "terraform_labels": {
+              "goog-terraform-provisioned": "true"
+            },
+            "timeouts": null,
+            "users": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "create_before_destroy": true
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

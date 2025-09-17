@@ -1,0 +1,11 @@
+vpc_module_name = "vpcvv"
+vpc_module_subnets = false
+subnet_ip = "10.12.0.0/24"
+subnet_name = "sub"
+subnet_region = "us-central1"
+project = "peak-key-463905-i9"
+machine = "e2-medium"
+zoner = "us-central1-a"
+image = "debian-12"
+vm_name = "modluessss"
+region = "us-central1"
