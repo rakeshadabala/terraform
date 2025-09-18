@@ -1,8 +1,8 @@
-# provider "google" {
-#     project = var.project_id
-#     region = var.region
-  
-# }
+provider "google" {
+    project = var.project_id
+    region = var.region
+
+}
 
 resource "google_compute_instance" "tf_vm" {
     name = var.name
@@ -15,10 +15,11 @@ resource "google_compute_instance" "tf_vm" {
     }
     network_interface {
       network = var.network
+      subnetwork = var.subnetwork
       access_config {
-        
+
       }
     }
-  
+
 }
 
