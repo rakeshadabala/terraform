@@ -1,55 +1,29 @@
-# provider "google" {
-#     project = "peak-key-463905-i9"
-#     region = "us-central1"
-# }
 
-# resource "google_compute_network" "vpc" {
-#     name = "net"
-#     auto_create_subnetworks = false  
-# }
 
-# resource "google_compute_subnetwork" "sub1" {
-#     name = "subnet1"
-#     network = google_compute_network.vpc.id
-#     ip_cidr_range = "10.51.0.0/24"
-#     region = "us-west4"
+resource "google_compute_network_peering" "name" {
+    name = "vpc-vpc2"
+    network = google_compute_network.vpc.id
+    peer_network = google_compute_network.vpc2.id
+}
 
-#     depends_on = [ google_compute_network.vpc ]
-  
-# }
+resource "google_compute_network_peering" "name1" {
+    name = "vpc2-vpc"
+    network = google_compute_network.vpc2.id
+    peer_network = google_compute_network.vpc.id
+}
 
-# resource "google_compute_network" "vpc2" {
-#     name = "net2"
-#     auto_create_subnetworks = false  
-# }
 
-# resource "google_compute_subnetwork" "sub2" {
-#     name = "subnet2"
-#     network = google_compute_network.vpc2.id
-#     ip_cidr_range = "10.30.0.0/24"
-#     region = "us-central1"
-  
-#   depends_on = [ google_compute_network.vpc2 ]
-  
-# }
+# resource "google_sql_database_instance" "default" {
+#   name             = "my-sql-instance"
+#   database_version = "MYSQL_8_0"
+#   region           = "us-central1"
 
-# locals {
-#   networks = {
-#     vpc = google_compute_network.vpc.id
-#     vpc2 = google_compute_network.vpc2.id
+#   settings {
+#     tier = "db-f1-micro"
 #   }
 # }
 
-# resource "google_compute_firewall" "fir" {
-#     for_each = local.networks
-#     name = "firewall-${each.key}"
-#     network = each.value
-#     direction = "INGRESS"
-#     allow {
-#       protocol = "tcp"
-#       ports = ["22","80"]
-#     }
-#     source_ranges = ["0.0.0.0/0"]
-
-#     depends_on = [ google_compute_network.vpc, google_compute_network.vpc2 ]
+# resource "google_sql_database" "default" {
+#   name     = "mydatabase"
+#   instance = google_sql_database_instance.default.name
 # }

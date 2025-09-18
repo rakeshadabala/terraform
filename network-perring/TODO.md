@@ -1,0 +1,2 @@
+- [x] Update boot disk image from 'debian-12' to 'ubuntu-2404-lts-amd64' for VM 'p1' (google_compute_instance.vm)
+- [x] Update boot disk image from 'debian-12' to 'ubuntu-2404-lts-amd64' for VM 'p2' (google_compute_instance.vm2)
