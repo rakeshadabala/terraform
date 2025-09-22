@@ -5,10 +5,10 @@ variable "vpc_module_subnets" {
     type = bool
 }
 
-#variable "region" {
-#    type = string
+variable "region" {
+   type = string
   
-#}
+}
 variable "subnet_ip" {
     type = string
 }
@@ -20,9 +20,9 @@ variable "subnet_region" {
     type = string
 }
 
-#variable "project" {
-   #type = string
-#}
+variable "project" {
+   type = string
+}
 variable "machine" {
     type = string
 }
