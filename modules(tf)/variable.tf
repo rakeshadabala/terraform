@@ -6,7 +6,7 @@ variable "vpc_module_subnets" {
 }
 
 variable "region" {
-    type = string
+   type = string
   
 }
 variable "subnet_ip" {
@@ -21,7 +21,7 @@ variable "subnet_region" {
 }
 
 variable "project" {
-    type = string
+   type = string
 }
 variable "machine" {
     type = string
