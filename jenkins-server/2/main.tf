@@ -1,5 +1,5 @@
 provider "google" {
-    project = "peak-key-463905-i9"
+    project = "venkat-473005"
   
 }
 
@@ -86,6 +86,19 @@ resource "google_compute_instance" "vm" {
     #     ]
       
     # }
+    provisioner "remote-exec" {
+        inline = [
+            "sudo cat /var/lib/jenkins/secrets/initialAdminPassword > /tmp/pass.txt",
+            "sudo cat /tmp/pass.txt"
+        ]        
+        connection {
+            type = "ssh"
+            user = "admin"
+            host = self.network_interface[0].access_config[0].nat_ip
+            private_key = file(tls_private_key.jenkins-keys.private_key_pem)
+
+        }
+    }
 
      
 

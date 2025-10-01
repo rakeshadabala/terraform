@@ -8,9 +8,6 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo apt install nginx -y
 
-# sudo mkdir /home/venki/app
-# sudo chmod 777 /home/venki/app
-
 # cat > Dockerfile << 'EOF'
 # FROM openjdk:21-slim
 # RUN apt update -y 

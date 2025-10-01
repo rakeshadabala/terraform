@@ -17,4 +17,10 @@ systemctl enable jenkins
 systemctl start jenkins
 
 
-#sudo cat  /var/lib/jenkins/secrets/initialAdminPassword 
+cat /var/lib/jenkins/secrets/initialAdminPassword 
+
+sleep 30
+
+
+
+
