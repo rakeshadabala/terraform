@@ -26,9 +26,9 @@ resource "google_sql_database_instance" "sql_instance" {
 }
 
 resource "google_sql_user" "mysqluser" {
-    name = "venkat"
+    name = var.db_user
     instance = google_sql_database_instance.sql_instance.name
-    password = "StrongPassw0rd!"
+    password = var.db_password
   
 }
 
