@@ -36,6 +36,8 @@ sudo docker logs  venkat-container
 
 echo "Deployment Completed"
 
+demo--added
+
 
 
 
